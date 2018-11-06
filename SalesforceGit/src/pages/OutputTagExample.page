@@ -1,0 +1,35 @@
+<apex:page >
+    <apex:form >
+        <apex:panelBar >
+            <apex:panelBarItem label="User Form" onenter="alert('Entering the User form')" onleave="alert('Leaving the User form')">PLease Enter User Details
+    <apex:pageBlock >
+        <apex:outputLabel value="Enter your Name" for="name"></apex:outputLabel>
+        <apex:inputText id="name"/><br/><br/>
+        
+        <apex:outputLabel value="Enter Your Password" for="password"></apex:outputLabel>
+        <apex:inputSecret id="password"/><br/><br/>
+        
+        <apex:outputLabel value="Are you Indian?" for="nationality"></apex:outputLabel>
+        <apex:inputCheckbox id="nationality"/><br/><br/>
+        
+        <apex:outputLink value="https://www.google.com">Google</apex:outputLink>
+        
+    </apex:pageBlock>
+                </apex:panelBarItem>
+                <apex:panelBarItem label="Residential Details">Hello How are you ??</apex:panelBarItem> 
+                <apex:panelBarItem label="Fiscal Year (Months)"> Month wise display
+            	<apex:panelGrid columns="3" border="3">
+                  <apex:outputText value="JAN"></apex:outputText>
+                  <apex:outputText value="FEB"></apex:outputText>
+                    <apex:outputText value="MAR"></apex:outputText>
+                    <apex:outputText value="APR"></apex:outputText>
+               </apex:panelGrid>
+ 				
+            	</apex:panelBarItem>
+            </apex:panelBar>
+        
+        <apex:panelBar >
+        <apex:panelBarItem label="Residential Details"></apex:panelBarItem>        
+        </apex:panelBar>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page standardController="Account" recordSetVar="acc">
+	<apex:form >
+    <apex:pageblock >
+        <apex:selectList value="{!filterId}" size="1">
+        	<apex:selectOptions value="{!listViewOptions}"></apex:selectOptions>        
+        </apex:selectList>
+   <apex:pageBlockButtons >
+    	<apex:commandButton value="Go" action="{!list}"/> 
+    </apex:pageBlockButtons>
+        <apex:dataList value="{!acc}" var="a">
+        	{!a.name}
+        </apex:dataList>
+        
+        <apex:panelGrid columns="4">
+            <apex:commandLink action="{!previous}">Prev</apex:commandLink>
+            <apex:commandLink action="{!next}">Next</apex:commandLink>
+            <apex:commandLink action="{!first}">FIRST</apex:commandLink>
+            <apex:commandLink action="{!last}">LAST</apex:commandLink>
+        </apex:panelGrid>
+    </apex:pageblock>
+   </apex:form>
+</apex:page>

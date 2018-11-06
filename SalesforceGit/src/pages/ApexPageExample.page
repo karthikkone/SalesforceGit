@@ -1,0 +1,30 @@
+<apex:page >
+    <apex:form >
+    <apex:pageBlock title="firstBlock">
+    	<apex:pageBlockSection title="firstSection">
+        	<apex:pageBlockSectionItem >Java</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >Advanced Java</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >Salesforce</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >Salesforce</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    	
+    	<apex:pageBlockSection title="secondSection">
+        	<apex:pageBlockSectionItem >C</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >C#</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >C++</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >C</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+        <apex:commandButton value="Save" />
+            <apex:commandButton value="Cancel" />
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    
+        <apex:pageBlock >
+    	
+        <apex:pageMessage summary="Validation message appear in the page messages component" severity="confirm" strength="1"></apex:pageMessage>
+        
+    	</apex:pageBlock>
+       
+    </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock >
+    <h1>
+        Please fill the below details
+        </h1><br/><br/>
+            Enter Name:<apex:inputText id="name"/><br/><br/>
+            Enter Age:<apex:inputText id="age" /><br/><br/>
+            Set a UserName:<apex:inputText id="username"/><br/><br/>
+            Set a Password:<apex:inputSecret id="password"/><br/><br/>
+            Coverletter:<apex:inputTextarea id="coverletter"/><br/><br/>
+            Are you Indian?:<apex:inputCheckbox id="checkNationality"/><br/><br/>
+            
+            <apex:commandButton value="Save"/>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

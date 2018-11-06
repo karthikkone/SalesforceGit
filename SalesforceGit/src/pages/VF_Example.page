@@ -1,0 +1,140 @@
+<!--
+<apex:page >
+    <apex:pageBlock>
+    <apex:pageBlockSection>
+         <p>
+      {! $User.FirstName } is using this page.
+        </p>
+
+	<apex:pageBlockSection>
+        His Username is :{! $User.USERNAME }
+        Date:{! TODAY() }
+    </apex:pageBlockSection>
+     </apex:pageBlockSection>
+        </apex:pageBlock>
+</apex:page> 
+
+<apex:page standardController="Account">
+    <apex:pageBlock title="Account Details">
+        <apex:pageBlockSection >
+            <!--<apex:detail />
+            
+            <apex:relatedList List="Contacts"/>
+            <apex:outputField value="{! Account.Name }"/> <br/>
+            <apex:outputField value="{! Account.Annual Revenue }"/> <br/>
+            Annual revenue: {! Account.AnnualRevenue }
+           
+            
+            <apex:pageBlockTable value="{! Account.contacts }" var="ct">
+            	<apex:column value="{! ct.FirstName }"/>
+                <apex:column value="{! ct.Title }"/>
+                <apex:column value="{! ct.phone }"/>
+            </apex:pageBlockTable>
+            
+            <apex:repeat value="{! Account.contacts }" var="ct">
+            	<apex:outputField value="{! ct.FirstName }"/>
+            	<apex:outputField value="{! ct.Phone }"/>
+            </apex:repeat>
+            
+            
+         </apex:pageBlockSection>
+        </apex:pageBlock>
+    
+</apex:page> 
+            
+
+<apex:page standardController="Account" recordSetVar="accounts">
+
+    <apex:slds />
+    <apex:image value="{! URLFOR($Resource.SalesforceImage.jpeg) }"/>
+    <apex:form>
+    <apex:pageblock title="Accounts List" Id="accounts_list">
+    Filter:
+    
+    <apex:selectList value="{! filterId }" size="1">
+    <apex:selectOptions value="{! listViewOptions }">
+        
+        </apex:selectOptions>
+    <apex:actionSupport event="onchange" reRender="accounts_list" />
+    </apex:selectList>
+    
+                <!-- Pagination 
+<table style="width: 100%"><tr>
+
+    <td>
+        Page: <apex:outputText 
+    value=" {!PageNumber} of {! CEILING(ResultSize / PageSize) }"/>
+    </td>            
+
+    <td align="center">
+        <!-- Previous page 
+<!-- active 
+<apex:commandLink action="{! Previous }" value="« Previous"
+     rendered="{! HasPrevious }"/>
+<!-- inactive (no earlier pages) 
+<apex:outputText style="color: #ccc;" value="« Previous"
+     rendered="{! NOT(HasPrevious) }"/>
+
+&nbsp;&nbsp;  
+
+        <!-- Next page 
+<!-- active 
+<apex:commandLink action="{! Next }" value="Next »"
+     rendered="{! HasNext }"/>
+<!-- inactive (no more pages) 
+<apex:outputText style="color: #ccc;" value="Next »"
+     rendered="{! NOT(HasNext) }"/>
+
+    </td>
+    
+    <td align="right">
+        Records per page:
+<apex:selectList value="{! PageSize }" size="1">
+    <apex:selectOption itemValue="5" itemLabel="5"/>
+    <apex:selectOption itemValue="20" itemLabel="20"/>
+    <apex:actionSupport event="onchange" reRender="contacts_list"/>
+</apex:selectList>
+    </td>
+
+</tr></table>
+        
+        
+        
+        
+        <apex:pageBlockTable value="{! accounts }" var="ct">
+        
+
+    	<apex:column value="{! ct.Name }"/>
+            <apex:column value="{! ct.Phone }"/>
+            <apex:column value="{! ct.AnnualRevenue }"/>
+            
+        </apex:pageBlockTable>
+    
+    
+    </apex:pageblock>
+   </apex:form>
+          
+
+
+</apex:page>
+
+-->
+<apex:page controller="VF_Controller">
+    
+    <apex:slds />
+    
+    <apex:pageblock >
+      <apex:pageBlockTable value="{! contacts }" var="ct">
+          
+          <apex:column value="{! ct.FirstName }"/>
+          <apex:column value="{! ct.LastName }"/>
+          <apex:column value="{! ct.Title }"/>
+          
+        
+        
+        </apex:pageBlockTable>
+    
+    </apex:pageblock>
+
+
+</apex:page>
