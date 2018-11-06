@@ -4,7 +4,7 @@ public class AccountCustomController {
     
     public AccountCustomController(){
     
-        account=[SELECT Id1,Name,Site from Account where Id=: Apexpages.currentPage().getParameters().get('id')];
+        account=[SELECT Id12,Name,Site from Account where Id=: Apexpages.currentPage().getParameters().get('id')];
     }
     
     public Account getAccount(){
